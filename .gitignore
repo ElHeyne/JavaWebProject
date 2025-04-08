@@ -8,7 +8,7 @@ out/
 .classpath
 .factorypath
 .project
-.settings
+src/.settings
 .springBeans
 .sts4-cache
 bin/
