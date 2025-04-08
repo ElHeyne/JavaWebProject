@@ -1,7 +1,7 @@
 function send(){
     var http = new XMLHttpRequest();
 
-    http.open("GET", "http://localhost:8080/WebTest/Servlet", true);
+    http.open("GET", "http://localhost:8080/JavaWebProject/index", true);
     http.send();
 
     http.onreadystatechange = function () {
