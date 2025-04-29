@@ -59,5 +59,5 @@ function postParkingSpots() {
 
     phttp.open("POST", "http://localhost:8080/JavaWebProject/ParkingSpots", true);
     phttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    phttp.send("id=" + document.getElementById("detailsParkingId").innerText + "&total_spots=" + document.getElementById("formTotalSpots").value);
+    phttp.send("id=" + document.getElementById("detailsParkingId").innerText + "&totalSpots=" + document.getElementById("formTotalSpots").value);
 }

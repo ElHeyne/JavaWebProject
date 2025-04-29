@@ -28,7 +28,7 @@ public class Index extends HttpServlet {
         response.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
         response.setHeader("Access-Control-Allow-Headers", "Content-Type");
 
-        Database.saveParking(request.getParameter("name"), Integer.parseInt(request.getParameter("total_spots")));
+        Database.saveParking(request.getParameter("name"), Integer.parseInt(request.getParameter("totalSpots")));
         response.getWriter().append("OK");
     }
 

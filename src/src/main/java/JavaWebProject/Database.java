@@ -4,7 +4,7 @@ import java.sql.*;
 
 public class Database {
 
-    public static void insertSpots(Integer total_spots, int idParking) throws SQLException {
+    public static void insertSpots(Integer totalSpots, int idParking) throws SQLException {
         String query = "INSERT INTO spots (referencial, reserved, parking_id) VALUES (?, ?, ?)";
 
         try {
@@ -34,7 +34,7 @@ public class Database {
                     throw new SQLException("No internal ID found");
                 }
 
-                for (int i = 0; i < total_spots; i++) {
+                for (int i = 0; i < totalSpots; i++) {
                     int s = internalId + i;
                     String referencial = "p" + String.format("%03d", idParking) + String.format("%06d", s);
                     boolean reserved = false;
@@ -50,9 +50,9 @@ public class Database {
             }
 
             try {
-                String sql = "UPDATE parkings SET internal_id = internal_id + ? WHERE id = ?";
-                PreparedStatement pstmt = conBD.prepareStatement(sql);
-                pstmt.setInt(1, total_spots);
+                String updateQuery = "UPDATE parkings SET internal_id = internal_id + ? WHERE id = ?";
+                PreparedStatement pstmt = conBD.prepareStatement(updateQuery);
+                pstmt.setInt(1, totalSpots);
                 pstmt.setInt(2, idParking);
 
                 int filasActualizadas = pstmt.executeUpdate();
@@ -77,7 +77,7 @@ public class Database {
         }
     }
 
-    public static void saveParking(String name, Integer total_spots){
+    public static void saveParking(String name, Integer totalSpots){
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
         } catch (ClassNotFoundException error) {
@@ -108,7 +108,7 @@ public class Database {
                 }
             }
 
-            insertSpots(total_spots, newParkingId);
+            insertSpots(totalSpots, newParkingId);
 
             try {
                 pstmt.close();

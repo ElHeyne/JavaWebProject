@@ -26,7 +26,7 @@ public class ParkingSpots extends HttpServlet {
         response.setHeader("Access-Control-Allow-Headers", "Content-Type");
 
         String id = request.getParameter("id");
-        String total_spots = request.getParameter("total_spots");
+        String total_spots = request.getParameter("totalSpots");
 
         try {
             Database.insertSpots(Integer.valueOf(total_spots), Integer.valueOf(id));
