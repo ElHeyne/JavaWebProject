@@ -33,3 +33,16 @@ function fetchParkingSpots(id) {
     xhttp.open("GET", `http://localhost:8080/JavaWebProject/ParkingSpots?id=${id}`, true);
     xhttp.send();
 }
+
+function delparking(id) {
+    let dhttp = new XMLHttpRequest();
+
+    dhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            window.location.href = "index.html";
+        };
+    };
+
+    dhttp.open("DELETE", "http://localhost:8080/JavaWebProject/Index?id=" + id, true);
+    dhttp.send();
+}

@@ -225,6 +225,7 @@ public class Database {
                         "<td>"+rs.getString("name")+"</td>"+
                         "<td>"+rs.getString("total_spots")+"</td>"+
                         "<td>"+rs.getString("reserved_spots")+"</td>"+
+                        "<td><button onclick='delparking("+rs.getString("id")+")'>Eliminar</button></td>"+
                         "</tr>";
             }
         } catch (SQLException error) {
