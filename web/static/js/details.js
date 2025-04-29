@@ -34,7 +34,7 @@ function fetchParkingSpots(id) {
     xhttp.send();
 }
 
-function delparking(id) {
+function delParking(id) {
     let dhttp = new XMLHttpRequest();
 
     dhttp.onreadystatechange = function () {
@@ -45,4 +45,19 @@ function delparking(id) {
 
     dhttp.open("DELETE", "http://localhost:8080/JavaWebProject/Index?id=" + id, true);
     dhttp.send();
+}
+
+function postParkingSpots() {
+    let phttp = new XMLHttpRequest();
+
+    phttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("formTotalSpots").value = "";
+            window.location.reload();
+        };
+    };
+
+    phttp.open("POST", "http://localhost:8080/JavaWebProject/ParkingSpots", true);
+    phttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    phttp.send("id=" + document.getElementById("detailsParkingId").innerText + "&total_spots=" + document.getElementById("formTotalSpots").value);
 }

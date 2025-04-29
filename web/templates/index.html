@@ -15,15 +15,33 @@
         </ul>
     </nav>
     <section>
-        <h2>Añadir Parking</h2>
+        <section>
+            <h2>Añadir Parking</h2>
 
-        <label for="name">Nombre Parking</label>
-        <input type="text" id="name" required/>
+            <label for="name">Nombre del Parking</label>
+            <input type="text" id="name" required/>
 
-        <label for="total_spots">Numero Plazas</label>
-        <input type="number" id="total_spots" required/>
+            <label for="total_spots">Numero de Plazas</label>
+            <input type="number" id="total_spots" required/>
 
-        <button onclick="post()">Send</button>
+            <button onclick="post()">Send</button>
+        </section>
+
+        <section>
+            <h2>Acciones Generales</h2>
+
+            <button 
+                onclick="delgeneral()" 
+                title="Elimina toda la información de la app (Parkings, Plazas, Usuarios...). También reinicia todas las ID de la base de datos.">
+                ELIMINAR TODO
+            </button>
+
+            <button 
+                onclick="postgeneral()" 
+                title="Añade varios ejemplos de parkings e información variada.">
+                AÑADIR EJEMPLOS
+            </button>
+        </section>
     </section>
 
     <section>

@@ -15,23 +15,33 @@
         </ul>
     </nav>
 
-    <section>
-        <h2>Detalles del Parking</h2>
-        <table>
-            <thead>
-            <tr>
-                <th>ID</th>
-                <th>Nombre</th>
-                <th>Plazas Totales</th>
-                <th>Plazas Reservadas</th>
-                <th>Acciones</th>
-            </tr>
-            </thead>
-            <tbody id="parkingDetailsTbody">
+    <secion>
+        <section>
+            <h2>Detalles del Parking</h2>
+            <table>
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Plazas Totales</th>
+                    <th>Plazas Reservadas</th>
+                    <th>Acciones</th>
+                </tr>
+                </thead>
+                <tbody id="parkingDetailsTbody">
 
-            </tbody>
-        </table>
-    </section>
+                </tbody>
+            </table>
+        </section>
+        <section>
+            <h2>Añadir Plazas</h2>
+
+            <label for="formTotalSpots">Cantidad de Plazas</label>
+            <input type="number" id="formTotalSpots" required>
+
+            <button onclick="postParkingSpots()">Añadir</button>
+        </section>
+    </secion>
 
     <section>
         <h2>Plazas</h2>
