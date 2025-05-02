@@ -1,4 +1,4 @@
-package src.main.java.JavaWebProject;
+package JavaWebProject;
 
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
