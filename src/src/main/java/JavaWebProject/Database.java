@@ -252,11 +252,11 @@ public class Database {
             while (rs.next()){
                 resultat=resultat+
                         "<tr>"+
-                        "<td>"+rs.getString("id")+"</td>"+
-                        "<td>"+rs.getString("name")+"</td>"+
-                        "<td>"+rs.getString("total_spots")+"</td>"+
-                        "<td>"+rs.getString("reserved_spots")+"</td>"+
-                        "<td>"+"<button class='btn btn-outline-light me-2 transition-ss' onclick='detailParking("+rs.getString("id")+")'>Detalles</button>"+
+                        "<td class='border-bottom-0'>"+rs.getString("id")+"</td>"+
+                        "<td class='border-bottom-0'>"+rs.getString("name")+"</td>"+
+                        "<td class='border-bottom-0'>"+rs.getString("total_spots")+"</td>"+
+                        "<td class='border-bottom-0'>"+rs.getString("reserved_spots")+"</td>"+
+                        "<td class='border-bottom-0'>"+"<button class='btn btn-outline-light me-2 transition-ss' onclick='detailParking("+rs.getString("id")+")'>Detalles</button>"+
                         "<button class='btn btn-outline-danger me-2 transition-ss' onclick='del("+rs.getString("id")+")'>Eliminar</button>"+"</td>"+
                         "</tr>";
             }
@@ -309,11 +309,11 @@ public class Database {
             while (rs.next()){
                 resultat=resultat+
                         "<tr>"+
-                        "<td id='detailsParkingId'>"+rs.getString("id")+"</td>"+
-                        "<td>"+rs.getString("name")+"</td>"+
-                        "<td>"+rs.getString("total_spots")+"</td>"+
-                        "<td>"+rs.getString("reserved_spots")+"</td>"+
-                        "<td><button onclick='delParking("+rs.getString("id")+")'>Eliminar</button></td>"+
+                        "<td class='border-bottom-0' id='detailsParkingId'>"+rs.getString("id")+"</td>"+
+                        "<td class='border-bottom-0'>"+rs.getString("name")+"</td>"+
+                        "<td class='border-bottom-0'>"+rs.getString("total_spots")+"</td>"+
+                        "<td class='border-bottom-0'>"+rs.getString("reserved_spots")+"</td>"+
+                        "<td class='border-bottom-0'><button class='btn btn-outline-danger me-2 transition-ss' onclick='delParking("+rs.getString("id")+")'>Eliminar</button></td>"+
                         "</tr>";
             }
         } catch (SQLException error) {

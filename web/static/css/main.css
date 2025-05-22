@@ -3,6 +3,10 @@
     color: beige;
 }
 
+body{
+    background-color: rgb(43 48 53) !important;
+}
+
 .transition{
     transition: all 0.1s !important;
 }
