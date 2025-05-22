@@ -3,6 +3,8 @@ package JavaWebProject;
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
+import src.main.java.JavaWebProject.Database;
+
 import java.io.IOException;
 
 @WebServlet(name = "Armagedon", value = "/Armagedon")
