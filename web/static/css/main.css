@@ -1,0 +1,20 @@
+* {
+    box-sizing: border-box;
+    color: beige;
+}
+
+.transition{
+    transition: all 0.1s !important;
+}
+
+.transition-s{
+    transition: all 0.2s !important;
+}
+
+.transition-ss{
+    transition: all 0.3s !important;
+}
+
+.transition-sss{
+    transition: all 0.5s !important;
+}

@@ -256,8 +256,8 @@ public class Database {
                         "<td>"+rs.getString("name")+"</td>"+
                         "<td>"+rs.getString("total_spots")+"</td>"+
                         "<td>"+rs.getString("reserved_spots")+"</td>"+
-                        "<td>"+"<button onclick='detailParking("+rs.getString("id")+")'>Detalles</button>"+"</td>"+
-                        "<td>"+"<button onclick='del("+rs.getString("id")+")'>Eliminar</button>"+"</td>"+
+                        "<td>"+"<button class='btn btn-outline-light me-2 transition-ss' onclick='detailParking("+rs.getString("id")+")'>Detalles</button>"+
+                        "<button class='btn btn-outline-danger me-2 transition-ss' onclick='del("+rs.getString("id")+")'>Eliminar</button>"+"</td>"+
                         "</tr>";
             }
         } catch (SQLException error) {
